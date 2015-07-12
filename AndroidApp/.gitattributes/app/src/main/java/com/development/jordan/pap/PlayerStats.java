@@ -15,12 +15,28 @@ public class PlayerStats extends Activity {
 
         Button buttonStarteSpiel = (Button) findViewById(R.id.BWeiter);
         buttonStarteSpiel.setOnClickListener(myhandler1);
+
+        Button buttonAddPlayer = (Button) findViewById(R.id.BAddPlayer);
+        buttonStarteSpiel.setOnClickListener(myhandler2);
+
+        Button buttonRandom = (Button) findViewById(R.id.BRandom);
+        buttonStarteSpiel.setOnClickListener(myhandler3);
     }
 
     View.OnClickListener myhandler1 = new View.OnClickListener() {
         public void onClick(View v) {
             //Save player stats
             startActivity(new Intent(PlayerStats.this,GameOverView.class));
+        }
+    };
+
+    View.OnClickListener myhandler2 = new View.OnClickListener() {
+        public void onClick(View v) {
+        }
+    };
+
+    View.OnClickListener myhandler3 = new View.OnClickListener() {
+        public void onClick(View v) {
         }
     };
 }

@@ -11,6 +11,7 @@
         android:layout_width="220dp"
         android:layout_height="40dp"
         android:text="@string/würfel"
+        android:id="@+id/BWürfel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp" />
 
@@ -18,6 +19,7 @@
         android:layout_width="220dp"
         android:layout_height="40dp"
         android:text="@string/player_stats"
+        android:id="@+id/BPlayerStats"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="180dp" />
 
@@ -25,6 +27,7 @@
         android:layout_width="220dp"
         android:layout_height="40dp"
         android:text="@string/player_inventory"
+        android:id="@+id/BPlayerInventory"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="260dp" />
 
