@@ -27,8 +27,6 @@ public class PAPActivity extends Activity {
 
     View.OnClickListener myhandler1 = new View.OnClickListener() {
         public void onClick(View v) {
-
-
             startActivity(new Intent(PAPActivity.this,SaveGameAS.class));
         }
     };

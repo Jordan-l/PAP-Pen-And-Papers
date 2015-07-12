@@ -331,17 +331,19 @@
             android:layout_marginTop="610dp" />
 
         <Button
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:text="@string/random"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="700dp" />
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="@string/random"
+            android:id="@+id/BRandom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="700dp" />
 
         <Button
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:text="@string/weiter"
+            android:id="@+id/BWeiter"
             android:layout_marginLeft="248dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"

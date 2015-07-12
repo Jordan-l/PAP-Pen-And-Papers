@@ -33,4 +33,7 @@
     <string name="stats_initiative">Initiative</string>
     <string name="random">Random</string>
     <string name="weiter">Weiter</string>
+    <string name="würfel">Würfel</string>
+    <string name="player_stats">Spieler Eigenschaften</string>
+    <string name="player_inventory">Spieler Inventar</string>
 </resources>
