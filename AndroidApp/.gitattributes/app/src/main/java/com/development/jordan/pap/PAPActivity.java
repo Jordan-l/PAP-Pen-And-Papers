@@ -16,13 +16,31 @@ public class PAPActivity extends Activity {
         setContentView(R.layout.activity_pap);
 
         Button buttonNSpiel = (Button) findViewById(R.id.BNeuesSpiel);
-        buttonNSpiel.setOnClickListener(myhandler);
+        buttonNSpiel.setOnClickListener(myhandler1);
+
+        Button buttonSielLaden = (Button) findViewById(R.id.BSpielLaden);
+        buttonSielLaden.setOnClickListener(myhandler2);
+
+        Button buttonSielOptionen = (Button) findViewById(R.id.BOptions);
+        buttonSielOptionen.setOnClickListener(myhandler3);
     }
 
-    View.OnClickListener myhandler = new View.OnClickListener() {
+    View.OnClickListener myhandler1 = new View.OnClickListener() {
         public void onClick(View v) {
-            Intent in = new Intent(PAPActivity.this, generalOptions.class);
-            startActivity(in);
+           // Intent in = new Intent(PAPActivity.this, generalOptions.class);
+           // startActivity(in);
+        }
+    };
+
+    View.OnClickListener myhandler2 = new View.OnClickListener() {
+        public void onClick(View v) {
+
+        }
+    };
+
+    View.OnClickListener myhandler3 = new View.OnClickListener() {
+        public void onClick(View v) {
+
         }
     };
 }
