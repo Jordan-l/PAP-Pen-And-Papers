@@ -30,7 +30,7 @@ public class PAPActivity extends Activity {
             // Intent in = new Intent(PAPActivity.this, PlayerStats.class);
            // startActivity(in);
 
-            startActivity(new Intent(PAPActivity.this,PlayerStats.class));
+            startActivity(new Intent(PAPActivity.this,SaveGameAS.class));
         }
     };
 
