@@ -14,4 +14,21 @@
     <string name="plus">+</string>
     <string name="player_alter">Alter</string>
     <string name="player_geschlecht">Geschlecht</string>
+    <string name="player_körpergröße">Körpergröße</string>
+    <string name="player_gewicht">Gewicht</string>
+    <string name="player_schuhgröße">Schuhgröße</string>
+    <string name="man">m</string>
+    <string name="woman">w</string>
+    <string name="stats_körperkraft">Körperkraft</string>
+    <string name="stats_ausdauer">Ausdauer</string>
+    <string name="stats_geschwidigkeit">Geschwindigkeit</string>
+    <string name="stats_intelligenz">Intelligenz</string>
+    <string name="stats_charme">Charme</string>
+    <string name="stats_geistige_gesundheit">geistige Gesundheit</string>
+    <string name="stats_lebensenergie">Lebensenergie</string>
+    <string name="stats_mentale_belastbarkeit">mentale Belastbarkeit</string>
+    <string name="stats_nahkampf">Nahkampf</string>
+    <string name="stats_distanz">Distanz</string>
+    <string name="stats_parade">Parade</string>
+    <string name="stats_initiative">Initiative</string>
 </resources>

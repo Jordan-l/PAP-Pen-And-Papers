@@ -50,7 +50,7 @@
             android:layout_marginTop="70dp" />
 
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/player_alter"
@@ -59,7 +59,7 @@
             android:layout_marginTop="160dp" />
 
         <EditText
-            android:layout_width="60p"
+            android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDAlter"
             android:layout_marginLeft="98dp"
@@ -69,7 +69,7 @@
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Körpergröße"
+            android:text="@string/player_körpergröße"
             android:id="@+id/TVKörpergröße"
             android:layout_marginLeft="180dp"
             android:layout_marginTop="160dp" />
@@ -85,153 +85,250 @@
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/player_geschlecht"
-            android:id="@+id/TVGesclecht"
+            android:text="@string/player_gewicht"
+            android:id="@+id/TVGewicht"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="220dp" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="m"
-            android:id="@+id/CBMan"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="215dp" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="w"
-            android:id="@+id/CBWoman"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="215dp" />
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/EDGewicht"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="190dp" />
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="r1"
-            android:id="@+id/r1"
+            android:text="@string/player_schuhgröße"
+            android:id="@+id/TVSchuhgröße"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="220dp" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/EDSchuhgröße"
+            android:layout_marginLeft="278dp"
+            android:layout_marginTop="190dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/player_geschlecht"
+            android:id="@+id/TVGesclecht"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="280dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/man"
+            android:id="@+id/CBMan"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="275dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/woman"
+            android:id="@+id/CBWoman"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="275dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/stats_körperkraft"
+            android:id="@+id/r1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="340dp" />
 
         <EditText
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDr1"
             android:layout_marginLeft="98dp"
-            android:layout_marginTop="250dp" />
+            android:layout_marginTop="310dp" />
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="r1"
+            android:text="@string/stats_ausdauer"
             android:id="@+id/r2"
             android:layout_marginLeft="180dp"
-            android:layout_marginTop="280dp" />
+            android:layout_marginTop="340dp" />
 
         <EditText
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDr2"
             android:layout_marginLeft="278dp"
-            android:layout_marginTop="250dp" />
+            android:layout_marginTop="310dp" />
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="r3"
+            android:text="@string/stats_geschwidigkeit"
             android:id="@+id/r3"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="340dp" />
+            android:layout_marginTop="400dp" />
 
         <EditText
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDr3"
             android:layout_marginLeft="98dp"
-            android:layout_marginTop="310dp" />
+            android:layout_marginTop="370dp" />
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="r4"
+            android:text="@string/stats_intelligenz"
             android:id="@+id/r4"
             android:layout_marginLeft="180dp"
-            android:layout_marginTop="340dp" />
+            android:layout_marginTop="400dp" />
 
         <EditText
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDr4"
             android:layout_marginLeft="278dp"
-            android:layout_marginTop="310dp" />
+            android:layout_marginTop="370dp" />
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="r3"
+            android:text="@string/stats_charme"
             android:id="@+id/r5"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="400dp" />
+            android:layout_marginTop="460dp" />
 
         <EditText
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDr5"
             android:layout_marginLeft="98dp"
-            android:layout_marginTop="370dp" />
+            android:layout_marginTop="430dp" />
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="r4"
+            android:text="@string/stats_geistige_gesundheit"
             android:id="@+id/r6"
             android:layout_marginLeft="180dp"
-            android:layout_marginTop="400dp" />
+            android:layout_marginTop="460dp" />
 
         <EditText
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDr6"
             android:layout_marginLeft="278dp"
-            android:layout_marginTop="370dp" />
+            android:layout_marginTop="430dp" />
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="r3"
+            android:text="@string/stats_lebensenergie"
             android:id="@+id/r7"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="460dp" />
+            android:layout_marginTop="520dp" />
 
         <EditText
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDr7"
             android:layout_marginLeft="98dp"
-            android:layout_marginTop="430dp" />
+            android:layout_marginTop="490dp" />
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="r4"
+            android:text="@string/stats_mentale_belastbarkeit"
             android:id="@+id/r8"
             android:layout_marginLeft="180dp"
-            android:layout_marginTop="460dp" />
+            android:layout_marginTop="520dp" />
 
         <EditText
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/EDr8"
             android:layout_marginLeft="278dp"
-            android:layout_marginTop="430dp" />
+            android:layout_marginTop="490dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/stats_nahkampf"
+            android:id="@+id/r9"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="580dp" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/EDr9"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="550dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/stats_distanz"
+            android:id="@+id/r10"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="580dp" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/EDr10"
+            android:layout_marginLeft="278dp"
+            android:layout_marginTop="550dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/stats_parade"
+            android:id="@+id/r11"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="640dp" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/EDr11"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="610dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/stats_initiative"
+            android:id="@+id/r12"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="640dp" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/EDr12"
+            android:layout_marginLeft="278dp"
+            android:layout_marginTop="610dp" />
+
     </RelativeLayout>
  </ScrollView>
