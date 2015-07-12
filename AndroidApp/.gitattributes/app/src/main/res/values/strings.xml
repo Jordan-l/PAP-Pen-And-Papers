@@ -9,4 +9,9 @@
     <string name="game_options">   Optionen   </string>
     <string name="save_game">Speicher Spiel</string>
     <string name="game_name"> Name </string>
+    <string name="player_name">Name</string>
+    <string name="player_beruf">Beruf</string>
+    <string name="plus">+</string>
+    <string name="player_alter">Alter</string>
+    <string name="player_geschlecht">Geschlecht</string>
 </resources>
