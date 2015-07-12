@@ -7,4 +7,6 @@
     <string name="neues_spiel">Neues Spiel</string>
     <string name="spiel_laden">Spiel Laden</string>
     <string name="game_options">   Optionen   </string>
+    <string name="save_game">Speicher Spiel</string>
+    <string name="game_name"> Name </string>
 </resources>
