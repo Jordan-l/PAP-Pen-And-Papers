@@ -21,14 +21,16 @@
     <string name="woman">w</string>
     <string name="stats_körperkraft">Körperkraft</string>
     <string name="stats_ausdauer">Ausdauer</string>
-    <string name="stats_geschwidigkeit">Geschwindigkeit</string>
+    <string name="stats_geschwidigkeit">Schnelligkeit</string> <!-- Geschwindigkeit -->
     <string name="stats_intelligenz">Intelligenz</string>
     <string name="stats_charme">Charme</string>
-    <string name="stats_geistige_gesundheit">geistige Gesundheit</string>
-    <string name="stats_lebensenergie">Lebensenergie</string>
-    <string name="stats_mentale_belastbarkeit">mentale Belastbarkeit</string>
+    <string name="stats_geistige_gesundheit">Gesundheit</string>  <!-- geistige Gesundheit -->
+    <string name="stats_lebensenergie">Leben</string> <!-- Lebensenergie -->
+    <string name="stats_mentale_belastbarkeit">Belastbarkeit</string> <!-- metale Belastbarkeit -->
     <string name="stats_nahkampf">Nahkampf</string>
     <string name="stats_distanz">Distanz</string>
     <string name="stats_parade">Parade</string>
     <string name="stats_initiative">Initiative</string>
+    <string name="random">Random</string>
+    <string name="weiter">Weiter</string>
 </resources>

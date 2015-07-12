@@ -27,7 +27,7 @@
             android:layout_marginTop="40dp" />
 
         <EditText
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="60dp"
             android:id="@+id/EDPlayerName"
             android:layout_marginLeft="98dp"
@@ -43,7 +43,7 @@
             android:layout_marginTop="100dp" />
 
         <EditText
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="60dp"
             android:id="@+id/EDBeruf"
             android:layout_marginLeft="98dp"
@@ -66,7 +66,7 @@
             android:layout_marginTop="130dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/player_körpergröße"
@@ -75,14 +75,14 @@
             android:layout_marginTop="160dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDKörpergröße"
-            android:layout_marginLeft="278dp"
+            android:layout_marginLeft="298dp"
             android:layout_marginTop="130dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/player_gewicht"
@@ -98,7 +98,7 @@
             android:layout_marginTop="190dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/player_schuhgröße"
@@ -107,14 +107,14 @@
             android:layout_marginTop="220dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="140dp"
             android:layout_height="60dp"
             android:id="@+id/EDSchuhgröße"
             android:layout_marginLeft="278dp"
             android:layout_marginTop="190dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/player_geschlecht"
@@ -139,7 +139,7 @@
             android:layout_marginTop="275dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_körperkraft"
@@ -148,14 +148,14 @@
             android:layout_marginTop="340dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr1"
-            android:layout_marginLeft="98dp"
+            android:layout_marginLeft="118dp"
             android:layout_marginTop="310dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_ausdauer"
@@ -164,14 +164,14 @@
             android:layout_marginTop="340dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr2"
-            android:layout_marginLeft="278dp"
+            android:layout_marginLeft="298dp"
             android:layout_marginTop="310dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_geschwidigkeit"
@@ -180,14 +180,14 @@
             android:layout_marginTop="400dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr3"
-            android:layout_marginLeft="98dp"
+            android:layout_marginLeft="118dp"
             android:layout_marginTop="370dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_intelligenz"
@@ -196,14 +196,14 @@
             android:layout_marginTop="400dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr4"
-            android:layout_marginLeft="278dp"
+            android:layout_marginLeft="298dp"
             android:layout_marginTop="370dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_charme"
@@ -212,14 +212,14 @@
             android:layout_marginTop="460dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr5"
-            android:layout_marginLeft="98dp"
+            android:layout_marginLeft="118dp"
             android:layout_marginTop="430dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_geistige_gesundheit"
@@ -228,14 +228,14 @@
             android:layout_marginTop="460dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr6"
-            android:layout_marginLeft="278dp"
+            android:layout_marginLeft="298dp"
             android:layout_marginTop="430dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_lebensenergie"
@@ -244,14 +244,14 @@
             android:layout_marginTop="520dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr7"
-            android:layout_marginLeft="98dp"
+            android:layout_marginLeft="118dp"
             android:layout_marginTop="490dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_mentale_belastbarkeit"
@@ -260,14 +260,14 @@
             android:layout_marginTop="520dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr8"
-            android:layout_marginLeft="278dp"
+            android:layout_marginLeft="298dp"
             android:layout_marginTop="490dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_nahkampf"
@@ -276,14 +276,14 @@
             android:layout_marginTop="580dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr9"
-            android:layout_marginLeft="98dp"
+            android:layout_marginLeft="118dp"
             android:layout_marginTop="550dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_distanz"
@@ -292,14 +292,14 @@
             android:layout_marginTop="580dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr10"
-            android:layout_marginLeft="278dp"
+            android:layout_marginLeft="298dp"
             android:layout_marginTop="550dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_parade"
@@ -308,14 +308,14 @@
             android:layout_marginTop="640dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr11"
-            android:layout_marginLeft="98dp"
+            android:layout_marginLeft="118dp"
             android:layout_marginTop="610dp" />
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="140dp"
             android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/stats_initiative"
@@ -324,11 +324,28 @@
             android:layout_marginTop="640dp" />
 
         <EditText
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="60dp"
             android:id="@+id/EDr12"
-            android:layout_marginLeft="278dp"
+            android:layout_marginLeft="298dp"
             android:layout_marginTop="610dp" />
+
+        <Button
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="@string/random"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="700dp" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="@string/weiter"
+            android:layout_marginLeft="248dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="700dp" />
 
     </RelativeLayout>
  </ScrollView>
