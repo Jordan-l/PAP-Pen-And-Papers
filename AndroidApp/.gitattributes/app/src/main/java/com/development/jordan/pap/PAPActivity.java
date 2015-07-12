@@ -14,11 +14,12 @@ public class PAPActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pap);
+
+        Button buttonNSpiel = (Button) findViewById(R.id.BNeuesSpiel);
+        buttonNSpiel.setOnClickListener(myhandler);
     }
 
-    Button buttonNSpiel = (Button) findViewById(R.id.BNeuesSpiel);
-    OnClickListener buttonNeuesSpiel = new OnClickListener() {
-        @Override
+    View.OnClickListener myhandler = new View.OnClickListener() {
         public void onClick(View v) {
             Intent in = new Intent(PAPActivity.this, generalOptions.class);
             startActivity(in);
