@@ -20,7 +20,7 @@
         style="@style/AppTheme" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="@string/neues_spiel"
         android:id="@+id/BNeuesSpiel"
@@ -32,7 +32,7 @@
         android:layout_marginBottom="98dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="@string/spiel_laden"
         android:id="@+id/BSpielLaden"
@@ -43,7 +43,7 @@
         android:layout_marginRight="98dp"
         android:layout_marginLeft="98dp" />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="@string/game_options"
         android:id="@+id/BOptions"
