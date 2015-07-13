@@ -13,14 +13,14 @@ public class GameOverView extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_over_view);
 
-        Button buttonWürfel = (Button) findViewById(R.id.BWürfel);
-        buttonWürfel.setOnClickListener(myhandler1);
+        Button buttonWuerfel = (Button) findViewById(R.id.BWuerfel);
+        buttonWuerfel.setOnClickListener(myhandler1);
 
         Button buttonPlayerStats = (Button) findViewById(R.id.BPlayerStats);
-        buttonWürfel.setOnClickListener(myhandler2);
+        buttonPlayerStats.setOnClickListener(myhandler2);
 
         Button buttonPlayerInventory = (Button) findViewById(R.id.BPlayerInventory);
-        buttonWürfel.setOnClickListener(myhandler3);
+        buttonPlayerInventory.setOnClickListener(myhandler3);
     }
 
     View.OnClickListener myhandler1 = new View.OnClickListener() {

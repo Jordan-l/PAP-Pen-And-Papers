@@ -8,10 +8,14 @@ import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 
+import org.json.JSONArray;
+
 public class SaveGameAS extends Activity {
 
     //Variables
-    CharSequence gameName;
+    public static String gameName;
+
+    public static JSONArray GameStats = new JSONArray();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

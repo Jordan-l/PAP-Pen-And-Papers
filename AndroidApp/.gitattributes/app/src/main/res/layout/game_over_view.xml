@@ -11,7 +11,7 @@
         android:layout_width="220dp"
         android:layout_height="40dp"
         android:text="@string/würfel"
-        android:id="@+id/BWürfel"
+        android:id="@+id/BWuerfel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp" />
 
