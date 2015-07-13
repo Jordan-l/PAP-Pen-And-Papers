@@ -5,7 +5,7 @@ package com.development.jordan.pap;
  */
 public class Player
 {
-    String name;
+    /*String name;
     String beruf;
     String geschlecht;
     int alter;
@@ -25,7 +25,48 @@ public class Player
     int parade;
     int initiative;
 
-    public void setName(String n)
+    public Player (String name,
+            String beruf,
+            String geschlecht,
+            int alter,
+            double koerpergroesse,
+            double gewicht,
+            double schuhgroesse,
+            int koerperkraft,
+            int ausdauer,
+            int geschwindigkeit,
+            int intelligenz,
+            int charme,
+            int geistigeGesundheit,
+            int lebensenergie,
+            int mentaleBelastbarkeit,
+            int nahkampf,
+            int distanz,
+            int parade,
+            int initiative)
+    {
+        name = name;
+        beruf = beruf;
+        geschlecht = geschlecht;
+        alter = alter;
+        koerpergroesse = koerpergroesse;
+        gewicht = gewicht;
+        schuhgroesse = schuhgroesse;
+        koerperkraft = koerperkraft;
+        ausdauer = ausdauer;
+        geschwindigkeit = geschwindigkeit;
+        intelligenz = intelligenz ;
+        charme = charme;
+        geistigeGesundheit = geistigeGesundheit;
+        lebensenergie = lebensenergie;
+        mentaleBelastbarkeit = mentaleBelastbarkeit;
+        nahkampf = nahkampf;
+        distanz = distanz;
+        parade = parade;
+        initiative = initiative;
+    }
+
+    public  void setName(String n)
     {
         this.name = n;
     }
@@ -213,5 +254,25 @@ public class Player
     public int getInitiative()
     {
         return initiative;
-    }
+    }*/
+
+    static String name;
+    static String beruf;
+    static String geschlecht;
+    static int alter;
+    static double koerpergroesse;
+    static double gewicht;
+    static double schuhgroesse;
+    static int koerperkraft;
+    static int ausdauer;
+    static int geschwindigkeit;
+    static int intelligenz;
+    static int charme;
+    static int geistigeGesundheit;
+    static int lebensenergie;
+    static int mentaleBelastbarkeit;
+    static int nahkampf;
+    static int distanz;
+    static int parade;
+    static int initiative;
 }
