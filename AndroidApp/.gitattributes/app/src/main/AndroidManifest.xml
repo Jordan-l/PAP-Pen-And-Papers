@@ -19,6 +19,7 @@
         <activity android:name=".PlayerStats"></activity>
         <activity android:name=".SaveGameAS"></activity>
         <activity android:name=".GameOverView"></activity>
+        <activity android:name=".PlayersList"></activity>
     </application>
 
 </manifest>

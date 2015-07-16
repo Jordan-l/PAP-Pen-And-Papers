@@ -15,6 +15,8 @@ public class PAPActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pap);
 
+        Database db = new Database(this);
+
         Button buttonNSpiel = (Button) findViewById(R.id.BNeuesSpiel);
         buttonNSpiel.setOnClickListener(myhandler1);
 

@@ -29,7 +29,9 @@ public class GameOverView extends Activity {
     };
 
     View.OnClickListener myhandler2 = new View.OnClickListener() {
-        public void onClick(View v) {
+        public void onClick(View v)
+        {
+            startActivity(new Intent(GameOverView.this,PlayersList.class));
         }
     };
 

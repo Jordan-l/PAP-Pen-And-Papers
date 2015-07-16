@@ -5,75 +5,149 @@ package com.development.jordan.pap;
  */
 public class Player
 {
-    /*String name;
+    int id;
+    String gameName;
+    String spielerName;
     String beruf;
     String geschlecht;
-    int alter;
-    double koerpergroesse;
-    double gewicht;
-    double schuhgroesse;
-    int koerperkraft;
-    int ausdauer;
-    int geschwindigkeit;
-    int intelligenz;
-    int charme;
-    int geistigeGesundheit;
-    int lebensenergie;
-    int mentaleBelastbarkeit;
-    int nahkampf;
-    int distanz;
-    int parade;
-    int initiative;
+    String alter;
+    String koerpergroesse;
+    String gewicht;
+    String schuhgroesse;
+    String koerperkraft;
+    String ausdauer;
+    String geschwindigkeit;
+    String intelligenz;
+    String charme;
+    String geistigeGesundheit;
+    String lebensenergie;
+    String mentaleBelastbarkeit;
+    String nahkampf;
+    String distanz;
+    String parade;
+    String initiative;
 
-    public Player (String name,
+    public Player(int i,String stringABC, String string, String cursorString, String s, String string1, String cursorString1, String s1, String string2, String cursorString2, String s2, String string3, String cursorString3, String s3, String string4, String cursorString4, String s4, String string5, String cursorString5, String s5, String string6, String cursorString6){}
+
+    public Player (
+                    int id,
+                    String gameName,
+                    String name,
+                    String beruf,
+                    String geschlecht,
+                    String alter,
+                    String koerpergroesse,
+                    String gewicht,
+                    String schuhgroesse,
+                    String koerperkraft,
+                    String ausdauer,
+                    String geschwindigkeit,
+                    String intelligenz,
+                    String charme,
+                    String geistigeGesundheit,
+                    String lebensenergie,
+                    String mentaleBelastbarkeit,
+                    String nahkampf,
+                    String distanz,
+                    String parade,
+                    String initiative)
+    {
+        this.id = id;
+        this.gameName = gameName;
+        this.spielerName = name;
+        this.beruf = beruf;
+        this.geschlecht = geschlecht;
+        this.alter = alter;
+        this.koerpergroesse = koerpergroesse;
+        this.gewicht = gewicht;
+        this.schuhgroesse = schuhgroesse;
+        this.koerperkraft = koerperkraft;
+        this.ausdauer = ausdauer;
+        this.geschwindigkeit = geschwindigkeit;
+        this.intelligenz = intelligenz ;
+        this.charme = charme;
+        this.geistigeGesundheit = geistigeGesundheit;
+        this.lebensenergie = lebensenergie;
+        this.mentaleBelastbarkeit = mentaleBelastbarkeit;
+        this.nahkampf = nahkampf;
+        this.distanz = distanz;
+        this.parade = parade;
+        this.initiative = initiative;
+    }
+
+    public Player (
+            String gameName,
+            String name,
             String beruf,
-            String geschlecht,
-            int alter,
-            double koerpergroesse,
-            double gewicht,
-            double schuhgroesse,
-            int koerperkraft,
-            int ausdauer,
-            int geschwindigkeit,
-            int intelligenz,
-            int charme,
-            int geistigeGesundheit,
-            int lebensenergie,
-            int mentaleBelastbarkeit,
-            int nahkampf,
-            int distanz,
-            int parade,
-            int initiative)
+            String geschlecht, String alter,
+            String koerpergroesse,
+            String gewicht,
+            String schuhgroesse,
+            String koerperkraft,
+            String ausdauer,
+            String geschwindigkeit,
+            String intelligenz,
+            String charme,
+            String geistigeGesundheit,
+            String lebensenergie,
+            String mentaleBelastbarkeit,
+            String nahkampf,
+            String distanz,
+            String parade,
+            String initiative)
     {
-        name = name;
-        beruf = beruf;
-        geschlecht = geschlecht;
-        alter = alter;
-        koerpergroesse = koerpergroesse;
-        gewicht = gewicht;
-        schuhgroesse = schuhgroesse;
-        koerperkraft = koerperkraft;
-        ausdauer = ausdauer;
-        geschwindigkeit = geschwindigkeit;
-        intelligenz = intelligenz ;
-        charme = charme;
-        geistigeGesundheit = geistigeGesundheit;
-        lebensenergie = lebensenergie;
-        mentaleBelastbarkeit = mentaleBelastbarkeit;
-        nahkampf = nahkampf;
-        distanz = distanz;
-        parade = parade;
-        initiative = initiative;
+        this.gameName = gameName;
+        this.spielerName = name;
+        this.beruf = beruf;
+        this.geschlecht = geschlecht;
+        this.alter = alter;
+        this.koerpergroesse = koerpergroesse;
+        this.gewicht = gewicht;
+        this.schuhgroesse = schuhgroesse;
+        this.koerperkraft = koerperkraft;
+        this.ausdauer = ausdauer;
+        this.geschwindigkeit = geschwindigkeit;
+        this.intelligenz = intelligenz ;
+        this.charme = charme;
+        this.geistigeGesundheit = geistigeGesundheit;
+        this.lebensenergie = lebensenergie;
+        this.mentaleBelastbarkeit = mentaleBelastbarkeit;
+        this.nahkampf = nahkampf;
+        this.distanz = distanz;
+        this.parade = parade;
+        this.initiative = initiative;
     }
 
-    public  void setName(String n)
+    public Player(){}
+
+    public  void setId(int id)
     {
-        this.name = n;
+        this.id = id;
     }
 
-    public String getName()
+    public int getId()
     {
-        return name;
+        return this.id;
+    }
+
+    public void setGameName(String gameName)
+    {
+        this.gameName = gameName;
+    }
+
+    public String getGameName()
+    {
+        return this.gameName;
+    }
+
+    public  void setSpielerName(String name)
+    {
+        this.spielerName = name;
+    }
+
+    public String getSpielerName()
+    {
+        return this.spielerName;
     }
 
     public void setBeruf(String b)
@@ -83,7 +157,7 @@ public class Player
 
     public String getBeruf()
     {
-        return beruf;
+        return this.beruf;
     }
 
     public void setGeschlecht(String g)
@@ -93,186 +167,166 @@ public class Player
 
     public String getGeschlecht()
     {
-        return geschlecht;
+        return this.geschlecht;
     }
 
-    public void setAlter(int a)
+    public void setAlter(String a)
     {
         this.alter = a;
     }
 
-    public int getAlter()
+    public String getAlter()
     {
-        return alter;
+        return this.alter;
     }
 
-    public void setKoerpergroesse(double k)
+    public void setKoerpergroesse(String k)
     {
         this.koerpergroesse = k;
     }
 
-    public double getKoerpergroesse()
+    public String getKoerpergroesse()
     {
-        return koerpergroesse;
+        return this.koerpergroesse;
     }
 
-    public void setGewicht(double g)
+    public void setGewicht(String g)
     {
         this.gewicht = g;
     }
 
-    public double getGewicht()
+    public String getGewicht()
     {
-        return gewicht;
+        return this.gewicht;
     }
 
-    public void setSchuhgroesse(double s)
+    public void setSchuhgroesse(String s)
     {
         this.schuhgroesse = s;
     }
 
-    public double getSchuhgroesse()
+    public String getSchuhgroesse()
     {
-        return schuhgroesse;
+        return this.schuhgroesse;
     }
 
-    public void setKoerperkraft(int kk)
+    public void setKoerperkraft(String kk)
     {
         this.koerperkraft = kk;
     }
 
-    public int getKoerperkraft()
+    public String getKoerperkraft()
     {
-        return koerperkraft;
+        return this.koerperkraft;
     }
 
-    public void setAusdauer(int ausd)
+    public void setAusdauer(String ausd)
     {
         this.ausdauer = ausd;
     }
 
-    public int getAusdauer()
+    public String getAusdauer()
     {
-        return ausdauer;
+        return this.ausdauer;
     }
 
-    public void setGeschwindigkeit(int g)
+    public void setGeschwindigkeit(String g)
     {
         this.geschwindigkeit = g;
     }
 
-    public int getGeschwindigkeit()
+    public String getGeschwindigkeit()
     {
-        return geschwindigkeit;
+        return this.geschwindigkeit;
     }
 
-    public void setIntelligenz(int intel)
+    public void setIntelligenz(String intel)
     {
         this.intelligenz = intel;
     }
 
-    public int getIntelligenz()
+    public String getIntelligenz()
     {
-        return intelligenz;
+        return this.intelligenz;
     }
 
-    public void setCharme(int c)
+    public void setCharme(String c)
     {
         this.charme = c;
     }
 
-    public int getCharme()
+    public String getCharme()
     {
-        return charme;
+        return this.charme;
     }
 
-    public void setGeistigeGesundheit(int gg)
+    public void setGeistigeGesundheit(String gg)
     {
         this.geistigeGesundheit = gg;
     }
 
-    public int getGeistigeGesundheit()
+    public String getGeistigeGesundheit()
     {
-        return geistigeGesundheit;
+        return this.geistigeGesundheit;
     }
 
-    public void setLebensenergie(int le)
+    public void setLebensenergie(String le)
     {
         this.lebensenergie = le;
     }
 
-    public int getLebensenergie()
+    public String getLebensenergie()
     {
-        return lebensenergie;
+        return this.lebensenergie;
     }
 
-    public void setMentaleBelastbarkeit(int mb)
+    public void setMentaleBelastbarkeit(String mb)
     {
         this.mentaleBelastbarkeit = mb;
     }
 
-    public int getMentaleBelastbarkeit()
+    public String getMentaleBelastbarkeit()
     {
-        return mentaleBelastbarkeit;
+        return this.mentaleBelastbarkeit;
     }
 
-    public void setNahkampf(int nk)
+    public void setNahkampf(String nk)
     {
         this.nahkampf = nk;
     }
 
-    public int getNahkampf()
+    public String getNahkampf()
     {
-        return nahkampf;
+        return this.nahkampf;
     }
 
-    public void setDistanz(int d)
+    public void setDistanz(String d)
     {
         this.distanz = d;
     }
 
-    public int getDistanz()
+    public String getDistanz()
     {
-        return distanz;
+        return this.distanz;
     }
 
-    public void setParade(int p)
+    public void setParade(String p)
     {
         this.parade = p;
     }
 
-    public int getParade()
+    public String getParade()
     {
-        return parade;
+        return this.parade;
     }
 
-    public void setInitiative(int init)
+    public void setInitiative(String init)
     {
         this.initiative = init;
     }
 
-    public int getInitiative()
+    public String getInitiative()
     {
-        return initiative;
-    }*/
-
-    static String name;
-    static String beruf;
-    static String geschlecht;
-    static int alter;
-    static double koerpergroesse;
-    static double gewicht;
-    static double schuhgroesse;
-    static int koerperkraft;
-    static int ausdauer;
-    static int geschwindigkeit;
-    static int intelligenz;
-    static int charme;
-    static int geistigeGesundheit;
-    static int lebensenergie;
-    static int mentaleBelastbarkeit;
-    static int nahkampf;
-    static int distanz;
-    static int parade;
-    static int initiative;
+        return this.initiative;
+    }
 }

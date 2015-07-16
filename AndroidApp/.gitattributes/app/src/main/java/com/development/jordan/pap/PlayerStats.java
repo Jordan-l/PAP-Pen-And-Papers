@@ -1,8 +1,10 @@
 package com.development.jordan.pap;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +40,30 @@ public class PlayerStats extends Activity {
     EditText parade1;
     EditText initiative1;
 
-    String JSONArrayAsString;
+    String gameName;
+    String name;
+    String beruf;
+    String geschlecht;
+    String alter;
+    String koerpergroesse;
+    String gewicht;
+    String schuhgroesse;
+    String koerperkraft;
+    String ausdauer;
+    String geschwindigkeit;
+    String intelligenz;
+    String charme;
+    String geistigeGesundheit;
+    String lebensenergie;
+    String mentaleBelastbarkeit;
+    String nahkampf;
+    String distanz;
+    String parade;
+    String initiative;
+
+    Database db;
+
+    JSONArray zwischenSaveJArray = new JSONArray();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +84,11 @@ public class PlayerStats extends Activity {
         public void onClick(View v) {
 
             //Save player stats
-            //SaveArrayInCache(SavePlayerstats());
+
             SavePlayerstats();
-            Log.i("isKlicked", SavePlayerstats().toString());
+
+            Log.i("AllSavedPlayerStats", zwischenSaveJArray.toString());
+
             startActivity(new Intent(PlayerStats.this, GameOverView.class));
         }
     };
@@ -69,7 +96,9 @@ public class PlayerStats extends Activity {
     View.OnClickListener myhandler2 = new View.OnClickListener() {
         public void onClick(View v) {
             //save player stats
+
             SavePlayerstats();
+
             startActivity(new Intent(PlayerStats.this,PlayerStats.class));
         }
     };
@@ -79,140 +108,114 @@ public class PlayerStats extends Activity {
         }
     };
 
-    public JSONArray SavePlayerstats( )
+    public void SavePlayerstats()
     {
+        Player p = new Player();
+
+        gameName = SaveGameAS.gameName;
+
+        p.setGameName(gameName);
+
         name1 = (EditText)findViewById(R.id.EDPlayerName);
-        Player.name = name1.getText().toString();
+        name = name1.getText().toString();
+
+        p.setSpielerName(name);
 
         beruf1 = (EditText)findViewById(R.id.EDBeruf);
-        Player.beruf = beruf1.getText().toString();
+        beruf = beruf1.getText().toString();
 
+        p.setBeruf(beruf);
         //Vorsicht!!
         /*geschlecht1 = (EditText)findViewById(R.id.EDGameName);
         player.geschlecht = geschlecht1.getText().toString();*/
 
-        Player.geschlecht = "m"; //pls fix
+        geschlecht = "m"; //pls fix
+
+        p.setGeschlecht(geschlecht);
 
         alter1 = (EditText)findViewById(R.id.EDAlter);
-        Player.alter = Integer.parseInt(alter1.getText().toString());
+        alter = alter1.getText().toString();
+
+        p.setAlter(alter);
 
         koerpergroesse1 = (EditText)findViewById(R.id.EDKoerpergroesse);
-        Player.koerpergroesse = Double.valueOf(koerpergroesse1.getText().toString()).doubleValue();
+        koerpergroesse = koerpergroesse1.getText().toString();
+
+        p.setKoerpergroesse(koerpergroesse);
 
         gewicht1 = (EditText)findViewById(R.id.EDGewicht);
-        Player.gewicht = Double.valueOf(gewicht1.getText().toString()).doubleValue();
+        gewicht = gewicht1.getText().toString();
+
+        p.setGewicht(gewicht);
 
         schuhgroesse1 = (EditText)findViewById(R.id.EDSchuhgroesse);
-        Player.schuhgroesse = Double.valueOf(schuhgroesse1.getText().toString()).doubleValue();
+        schuhgroesse = schuhgroesse1.getText().toString();
+
+        p.setSchuhgroesse(schuhgroesse);
 
         koerperkraft1 = (EditText)findViewById(R.id.EDr1);
-        Player.koerperkraft = Integer.parseInt(koerperkraft1.getText().toString());
+        koerperkraft = koerperkraft1.getText().toString();
+
+        p.setKoerperkraft(koerperkraft);
 
         ausdauer1 = (EditText)findViewById(R.id.EDr2);
-        Player.ausdauer = Integer.parseInt(ausdauer1.getText().toString());
+        ausdauer = ausdauer1.getText().toString();
+
+        p.setAusdauer(ausdauer);
 
         geschwindigkeit1 = (EditText)findViewById(R.id.EDr3);
-        Player.geschwindigkeit = Integer.parseInt(geschwindigkeit1.getText().toString());
+        geschwindigkeit = geschwindigkeit1.getText().toString();
+
+        p.setGeschwindigkeit(geschwindigkeit);
 
         intelligenz1 = (EditText)findViewById(R.id.EDr4);
-        Player.intelligenz = Integer.parseInt(intelligenz1.getText().toString());
+        intelligenz = intelligenz1.getText().toString();
+
+        p.setIntelligenz(intelligenz);
 
         charme1 = (EditText)findViewById(R.id.EDr5);
-        Player.charme = Integer.parseInt(charme1.getText().toString());
+        charme = charme1.getText().toString();
+
+        p.setCharme(charme);
 
         geistigeGesundheit1 = (EditText)findViewById(R.id.EDr6);
-        Player.geistigeGesundheit = Integer.parseInt(geistigeGesundheit1.getText().toString());
+        geistigeGesundheit = geistigeGesundheit1.getText().toString();
+
+        p.setGeistigeGesundheit(geistigeGesundheit);
 
         lebensenergie1 = (EditText)findViewById(R.id.EDr7);
-        Player.lebensenergie = Integer.parseInt(lebensenergie1.getText().toString());
+        lebensenergie = lebensenergie1.getText().toString();
+
+        p.setLebensenergie(lebensenergie);
 
         mentaleBelastbarkeit1 = (EditText)findViewById(R.id.EDr8);
-        Player.mentaleBelastbarkeit = Integer.parseInt(mentaleBelastbarkeit1.getText().toString());
+        mentaleBelastbarkeit = mentaleBelastbarkeit1.getText().toString();
+
+        p.setMentaleBelastbarkeit(mentaleBelastbarkeit);
 
         nahkampf1 = (EditText)findViewById(R.id.EDr9);
-        Player.nahkampf = Integer.parseInt(nahkampf1.getText().toString());
+        nahkampf = nahkampf1.getText().toString();
+
+        p.setNahkampf(nahkampf);
 
         distanz1 = (EditText)findViewById(R.id.EDr10);
-        Player.distanz = Integer.parseInt(distanz1.getText().toString());
+        distanz = distanz1.getText().toString();
+
+        p.setDistanz(distanz);
 
         parade1 = (EditText)findViewById(R.id.EDr11);
-        Player.parade = Integer.parseInt(parade1.getText().toString());
+        parade = parade1.getText().toString();
+
+        p.setParade(parade);
 
         initiative1 = (EditText)findViewById(R.id.EDr12);
-        Player.initiative = Integer.parseInt(initiative1.getText().toString());
+        initiative = initiative1.getText().toString();
 
-        try{
-            return SaveGameAS.GameStats.put(ParseToJSONObject());
-        }catch (Exception e)
-        {
-            e.printStackTrace();
-        }
+        p.setParade(parade);
 
-        return null;
+        db.addPlayer(p);
 
+        Log.i("players",db.getAllPlayers().toString());
     }
 
-    public static JSONObject ParseToJSONObject()
-    {
-        try{
-
-            JSONObject playerObject = new JSONObject();
-
-            playerObject.put("name: ", Player.name);
-
-            playerObject.put("beruf: ", Player.beruf);
-
-            playerObject.put("alter: ", Player.alter);
-
-            playerObject.put("geschlecht: ", Player.geschlecht);
-
-            playerObject.put("koerpergroesse: ", Player.koerpergroesse);
-
-            playerObject.put("gewicht: ", Player.gewicht);
-
-            playerObject.put("koerperkraft: ", Player.koerperkraft);
-
-            playerObject.put("ausdauer: ", Player.ausdauer);
-
-            playerObject.put("geschwindigkeit: ", Player.geschwindigkeit);
-
-            playerObject.put("intelligenz: ", Player.intelligenz);
-
-            playerObject.put("charme: ", Player.charme);
-
-            playerObject.put("geistige Gesundheit: ", Player.geistigeGesundheit);
-
-            playerObject.put("mentale Belastbarkeit: ", Player.mentaleBelastbarkeit);
-
-            playerObject.put("nahkampf: ", Player.nahkampf);
-
-            playerObject.put("distanz: ", Player.distanz);
-
-            playerObject.put("parade: ", Player.parade);
-
-            playerObject.put("initiative: ", Player.initiative);
-
-            //SaveGameAS.GameStats.put(playerObject);
-
-            return playerObject;
-
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
-    public void SaveArrayInCache(JSONArray players)
-    {
-
-        JSONArrayAsString = players.toString();
-
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
-
-        SharedPreferences.Editor editor = pref.edit();
-
-        editor.putString(SaveGameAS.gameName.toString(), JSONArrayAsString); // Storing string
-
-    }
 }
