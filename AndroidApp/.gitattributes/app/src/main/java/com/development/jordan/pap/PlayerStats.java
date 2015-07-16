@@ -99,6 +99,8 @@ public class PlayerStats extends Activity {
 
             SavePlayerstats();
 
+            Log.i("AllSavedPlayerStats", zwischenSaveJArray.toString());
+
             startActivity(new Intent(PlayerStats.this,PlayerStats.class));
         }
     };
