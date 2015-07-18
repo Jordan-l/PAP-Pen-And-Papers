@@ -120,7 +120,7 @@ public class Database extends SQLiteOpenHelper {
     }
 
     // Getting single contact
-    public Player getPlayer(int id)
+    public Player getPlayer(String name)
     {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -146,7 +146,7 @@ public class Database extends SQLiteOpenHelper {
                         KEY_PARADE,
                         KEY_INITIATIVE
                 }, KEY_ID + "=?",
-                new String[]{String.valueOf(id)}, null, null, null, null);
+                new String[]{String.valueOf(name)}, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
 
@@ -256,3 +256,4 @@ public class Database extends SQLiteOpenHelper {
         db.close();
     }
 }
+
