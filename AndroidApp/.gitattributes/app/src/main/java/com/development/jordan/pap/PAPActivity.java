@@ -8,14 +8,20 @@ import android.widget.Button;
 import android.view.View.OnClickListener;
 
 
+
 public class PAPActivity extends Activity {
+
+    public static Database db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pap);
 
-        Database db = new Database(this);
+         db = new Database(this);
+
+        db.PrintLogs();
+
 
         Button buttonNSpiel = (Button) findViewById(R.id.BNeuesSpiel);
         buttonNSpiel.setOnClickListener(myhandler1);

@@ -43,6 +43,8 @@ public class Database extends SQLiteOpenHelper {
     private static final String KEY_PARADE= "parade";
     private static final String KEY_INITIATIVE= "initiative";
 
+    boolean success = false;
+
     public Database(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -86,77 +88,55 @@ public class Database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // Adding new contact
-    public void addPlayer(Player player)
+    public void addPlayer( String gameName,
+                           String name,
+                           String beruf,
+                           String geschlecht,
+                           String alter,
+                           String koerpergroesse,
+                           String gewicht,
+                           String schuhgroesse,
+                           String koerperkraft,
+                           String ausdauer,
+                           String geschwindigkeit,
+                           String intelligenz,
+                           String charme,
+                           String geistigeGesundheit,
+                           String lebensenergie,
+                           String mentaleBelastbarkeit,
+                           String nahkampf,
+                           String distanz,
+                           String parade,
+                           String initiative)
     {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
 
-        values.put(KEY_GAME_NAME, player.getGameName());
-        values.put(KEY_PLAYER_NAME, player.getSpielerName());
-        values.put(KEY_BERUF, player.getBeruf());
-        values.put(KEY_GESCHLECHT, player.getGeschlecht());
-        values.put(KEY_ALTER, player.getAlter());
-        values.put(KEY_KOERPERGROESSE, player.getKoerpergroesse());
-        values.put(KEY_GEWICHT, player.getGewicht());
-        values.put(KEY_SCHUHGROESSE, player.getSchuhgroesse());
-        values.put(KEY_KOERPER_KRAFT, player.getKoerperkraft());
-        values.put(KEY_AUSDAUER, player.getAusdauer());
-        values.put(KEY_GESCHWINDIGKEIT, player.getGeschwindigkeit());
-        values.put(KEY_INTELLIGENZ, player.getIntelligenz());
-        values.put(KEY_CHARME, player.getCharme());
-        values.put(KEY_GEISTIGE_GESUNDHEIT, player.getGeistigeGesundheit());
-        values.put(KEY_LEBENSENERGIE, player.getLebensenergie());
-        values.put(KEY_MENTALE_BELASTBARKEIT, player.getMentaleBelastbarkeit());
-        values.put(KEY_ATTACKE_NAHKAMPF, player.getNahkampf());
-        values.put(KEY_ATTACKE_DISTANZE, player.getDistanz());
-        values.put(KEY_PARADE, player.getParade());
-        values.put(KEY_INITIATIVE, player.getInitiative());
+        values.put(KEY_GAME_NAME, gameName);
+        values.put(KEY_PLAYER_NAME, name);
+        values.put(KEY_BERUF, beruf);
+        values.put(KEY_GESCHLECHT, geschlecht);
+        values.put(KEY_ALTER, alter);
+        values.put(KEY_KOERPERGROESSE, koerpergroesse);
+        values.put(KEY_GEWICHT, gewicht);
+        values.put(KEY_SCHUHGROESSE, schuhgroesse);
+        values.put(KEY_KOERPER_KRAFT, koerperkraft);
+        values.put(KEY_AUSDAUER, ausdauer);
+        values.put(KEY_GESCHWINDIGKEIT, geschwindigkeit);
+        values.put(KEY_INTELLIGENZ, intelligenz);
+        values.put(KEY_CHARME, charme);
+        values.put(KEY_GEISTIGE_GESUNDHEIT, geistigeGesundheit);
+        values.put(KEY_LEBENSENERGIE, lebensenergie);
+        values.put(KEY_MENTALE_BELASTBARKEIT, mentaleBelastbarkeit);
+        values.put(KEY_ATTACKE_NAHKAMPF,nahkampf);
+        values.put(KEY_ATTACKE_DISTANZE, distanz);
+        values.put(KEY_PARADE, parade);
+        values.put(KEY_INITIATIVE,initiative);
 
         // Inserting Row
         db.insert(TABLE_PLAYERS, null, values);
         db.close(); // Closing database connection
-    }
-
-    // Getting single contact
-    public Player getPlayer(String name)
-    {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.query(TABLE_PLAYERS, new String[]{KEY_ID,
-                        KEY_GAME_NAME,
-                        KEY_PLAYER_NAME,
-                        KEY_BERUF,
-                        KEY_GESCHLECHT,
-                        KEY_ALTER,
-                        KEY_KOERPERGROESSE,
-                        KEY_GEWICHT,
-                        KEY_SCHUHGROESSE,
-                        KEY_KOERPER_KRAFT,
-                        KEY_AUSDAUER,
-                        KEY_GESCHWINDIGKEIT,
-                        KEY_INTELLIGENZ,
-                        KEY_CHARME,
-                        KEY_GEISTIGE_GESUNDHEIT,
-                        KEY_LEBENSENERGIE,
-                        KEY_MENTALE_BELASTBARKEIT,
-                        KEY_ATTACKE_NAHKAMPF,
-                        KEY_ATTACKE_DISTANZE,
-                        KEY_PARADE,
-                        KEY_INITIATIVE
-                }, KEY_ID + "=?",
-                new String[]{String.valueOf(name)}, null, null, null, null);
-        if (cursor != null)
-            cursor.moveToFirst();
-
-        Player player = new Player(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2),cursor.getString(3),cursor.getString(4),
-                cursor.getString(5),cursor.getString(6),cursor.getString(7),cursor.getString(8),cursor.getString(9),
-                cursor.getString(10),cursor.getString(11),cursor.getString(12),cursor.getString(13),cursor.getString(14),
-                cursor.getString(15),cursor.getString(16),cursor.getString(17),cursor.getString(18),cursor.getString(19),cursor.getString(20));
-        // return contact
-        return player;
     }
 
     // Getting All Contacts
@@ -254,6 +234,97 @@ public class Database extends SQLiteOpenHelper {
         db.delete(TABLE_PLAYERS, KEY_ID + " = ?",
                 new String[] { String.valueOf(player.getId()) });
         db.close();
+    }
+
+    public Player findPlayerByName (String playerName)
+    {
+
+        String query = "SELECT * FROM " + TABLE_PLAYERS + " WHERE "+ KEY_PLAYER_NAME +" = " + playerName ;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery(query,null);
+
+       while (cursor.moveToNext())
+       {
+            cursor.moveToNext();
+            Player player = new Player(Integer.parseInt(cursor.getString(0)),
+                    cursor.getString(1), cursor.getString(2),cursor.getString(3),cursor.getString(4),
+                    cursor.getString(5),cursor.getString(6),cursor.getString(7),cursor.getString(8),cursor.getString(9),
+                    cursor.getString(10),cursor.getString(11),cursor.getString(12),cursor.getString(13),cursor.getString(14),
+                    cursor.getString(15),cursor.getString(16),cursor.getString(17),cursor.getString(18),cursor.getString(19),cursor.getString(20));
+            cursor.close();
+
+            return player;
+
+        }
+        db.close();
+        return null;
+    }
+
+    public boolean DataWithOutNull ()
+    {
+        List<Player> testPlayer = getAllPlayers();
+
+        try {
+            for (int i = 0; i < testPlayer.size(); i++) {
+                if (testPlayer.get(i) != null) {
+                    success = true;
+                } else {
+                    success = false;
+                }
+            }
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+            success = false;
+        }
+            return success;
+    }
+
+    public boolean AddPlayerTest()
+    {
+        try
+        {
+           addPlayer("Game1", "Paul", "LKW_Fahrer", "m", "54", "1,78", "100", "48", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+
+            success = true;
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+
+            success = false;
+        }
+
+        return success;
+    }
+
+    public boolean DeletePlayerTest()
+    {
+        Player player = findPlayerByName("Paul");
+
+        try
+        {
+            deletePlayer(player);
+
+            success = true;
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+            success = false;
+        }
+        return success;
+    }
+
+    public void PrintLogs ()
+    {
+        Log.i("Database is completely ", String.valueOf(DataWithOutNull()));
+
+        Log.i("Add Player Test ", String.valueOf(AddPlayerTest()));
+
+       //Log.i("Get Player Test ", findPlayerByName("Paul").toString());
+
+       // Log.i("Delete Player Test ", String.valueOf(DeletePlayerTest()));
     }
 }
 

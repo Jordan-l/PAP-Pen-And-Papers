@@ -11,11 +11,12 @@ import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-
+import com.development.jordan.pap.PAPActivity;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.lang.reflect.Array;
+import java.sql.SQLException;
 
 public class PlayerStats extends Activity {
 
@@ -61,9 +62,7 @@ public class PlayerStats extends Activity {
     String parade;
     String initiative;
 
-    Database db;
-
-    JSONArray zwischenSaveJArray = new JSONArray();
+    //Database db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,8 +86,6 @@ public class PlayerStats extends Activity {
 
             SavePlayerstats();
 
-            Log.i("AllSavedPlayerStats", zwischenSaveJArray.toString());
-
             startActivity(new Intent(PlayerStats.this, GameOverView.class));
         }
     };
@@ -98,8 +95,6 @@ public class PlayerStats extends Activity {
             //save player stats
 
             SavePlayerstats();
-
-            Log.i("AllSavedPlayerStats", zwischenSaveJArray.toString());
 
             startActivity(new Intent(PlayerStats.this,PlayerStats.class));
         }
@@ -112,112 +107,121 @@ public class PlayerStats extends Activity {
 
     public void SavePlayerstats()
     {
-        Player p = new Player();
-
         gameName = SaveGameAS.gameName;
 
-        p.setGameName(gameName);
+        //p.setGameName(gameName);
 
         name1 = (EditText)findViewById(R.id.EDPlayerName);
         name = name1.getText().toString();
 
-        p.setSpielerName(name);
+        //p.setSpielerName(name);
 
         beruf1 = (EditText)findViewById(R.id.EDBeruf);
         beruf = beruf1.getText().toString();
 
-        p.setBeruf(beruf);
+        //p.setBeruf(beruf);
         //Vorsicht!!
         /*geschlecht1 = (EditText)findViewById(R.id.EDGameName);
         player.geschlecht = geschlecht1.getText().toString();*/
 
         geschlecht = "m"; //pls fix
 
-        p.setGeschlecht(geschlecht);
+        //p.setGeschlecht(geschlecht);
 
         alter1 = (EditText)findViewById(R.id.EDAlter);
         alter = alter1.getText().toString();
 
-        p.setAlter(alter);
+        //p.setAlter(alter);
 
         koerpergroesse1 = (EditText)findViewById(R.id.EDKoerpergroesse);
         koerpergroesse = koerpergroesse1.getText().toString();
 
-        p.setKoerpergroesse(koerpergroesse);
+        //p.setKoerpergroesse(koerpergroesse);
 
         gewicht1 = (EditText)findViewById(R.id.EDGewicht);
         gewicht = gewicht1.getText().toString();
 
-        p.setGewicht(gewicht);
+        //p.setGewicht(gewicht);
 
         schuhgroesse1 = (EditText)findViewById(R.id.EDSchuhgroesse);
         schuhgroesse = schuhgroesse1.getText().toString();
 
-        p.setSchuhgroesse(schuhgroesse);
+        //p.setSchuhgroesse(schuhgroesse);
 
         koerperkraft1 = (EditText)findViewById(R.id.EDr1);
         koerperkraft = koerperkraft1.getText().toString();
 
-        p.setKoerperkraft(koerperkraft);
+        //p.setKoerperkraft(koerperkraft);
 
         ausdauer1 = (EditText)findViewById(R.id.EDr2);
         ausdauer = ausdauer1.getText().toString();
 
-        p.setAusdauer(ausdauer);
+        //p.setAusdauer(ausdauer);
 
         geschwindigkeit1 = (EditText)findViewById(R.id.EDr3);
         geschwindigkeit = geschwindigkeit1.getText().toString();
 
-        p.setGeschwindigkeit(geschwindigkeit);
+        //p.setGeschwindigkeit(geschwindigkeit);
 
         intelligenz1 = (EditText)findViewById(R.id.EDr4);
         intelligenz = intelligenz1.getText().toString();
 
-        p.setIntelligenz(intelligenz);
+        //p.setIntelligenz(intelligenz);
 
         charme1 = (EditText)findViewById(R.id.EDr5);
         charme = charme1.getText().toString();
 
-        p.setCharme(charme);
+        //p.setCharme(charme);
 
         geistigeGesundheit1 = (EditText)findViewById(R.id.EDr6);
         geistigeGesundheit = geistigeGesundheit1.getText().toString();
 
-        p.setGeistigeGesundheit(geistigeGesundheit);
+        //p.setGeistigeGesundheit(geistigeGesundheit);
 
         lebensenergie1 = (EditText)findViewById(R.id.EDr7);
         lebensenergie = lebensenergie1.getText().toString();
 
-        p.setLebensenergie(lebensenergie);
+        //p.setLebensenergie(lebensenergie);
 
         mentaleBelastbarkeit1 = (EditText)findViewById(R.id.EDr8);
         mentaleBelastbarkeit = mentaleBelastbarkeit1.getText().toString();
 
-        p.setMentaleBelastbarkeit(mentaleBelastbarkeit);
+        //p.setMentaleBelastbarkeit(mentaleBelastbarkeit);
 
         nahkampf1 = (EditText)findViewById(R.id.EDr9);
         nahkampf = nahkampf1.getText().toString();
 
-        p.setNahkampf(nahkampf);
+        //p.setNahkampf(nahkampf);
 
         distanz1 = (EditText)findViewById(R.id.EDr10);
         distanz = distanz1.getText().toString();
 
-        p.setDistanz(distanz);
+        //p.setDistanz(distanz);
 
         parade1 = (EditText)findViewById(R.id.EDr11);
         parade = parade1.getText().toString();
 
-        p.setParade(parade);
+        //p.setParade(parade);
 
         initiative1 = (EditText)findViewById(R.id.EDr12);
         initiative = initiative1.getText().toString();
 
-        p.setParade(parade);
+        //p.setParade(initiative);
 
-        db.addPlayer(p);
+        /*Player p = new Player(gameName,name,beruf,geschlecht,alter,koerpergroesse,gewicht,schuhgroesse,
+                koerperkraft,ausdauer,geschwindigkeit,intelligenz,charme,geistigeGesundheit,lebensenergie,
+                mentaleBelastbarkeit,nahkampf,distanz,parade,initiative);*/
 
-        Log.i("players",db.getAllPlayers().toString());
+       try{
+           PAPActivity.db.addPlayer(gameName, name, beruf, geschlecht, alter, koerpergroesse, gewicht, schuhgroesse,
+                   koerperkraft, ausdauer, geschwindigkeit, intelligenz, charme, geistigeGesundheit, lebensenergie,
+                   mentaleBelastbarkeit, nahkampf, distanz, parade, initiative);
+       }catch (Exception e)
+       {
+           e.printStackTrace();
+       }
+
+        Log.i("players", PAPActivity.db.getAllPlayers().toString());
     }
 
 }
